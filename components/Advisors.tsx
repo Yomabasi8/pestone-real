@@ -13,18 +13,18 @@ export default function Advisors() {
           </h2>
         </div>
         <div className="flex md:justify-end md:pt-3">
-          <p className="font-sans text-lg sm:text-xl text-stone-600 max-w-xs leading-relaxed" style={{ letterSpacing: "-1.5px" }}>
+          <p className="font-sans text-lg sm:text-xl text-stone-600 max-w-sm leading-relaxed" style={{ letterSpacing: "-1.5px" }}>
             We guide you through every step of your real estate journey with clarity, professionalism, and integrity.
           </p>
         </div>
       </div>
 
       {/* Content Grid: Large Image and Staggered Stats Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
+      <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-8 lg:gap-12 items-center">
+
         {/* Left Column: Architectural Photo */}
-        <div className="lg:col-span-7 w-full">
-          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-stone-200/50 group select-none">
+        <div className="w-full">
+          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-lg border border-stone-200/50 group select-none">
             <Image
               src="/Images/real-estate 1.png"
               alt="Premium architectural building design"
@@ -39,7 +39,7 @@ export default function Advisors() {
         </div>
 
         {/* Right Column: Premium Staggered Stat Cards */}
-        <div className="lg:col-span-5 w-full grid grid-cols-2 gap-4 sm:gap-6 items-start">
+        <div className="w-full grid grid-cols-2 gap-4 sm:gap-6 items-start">
           
           {/* Staggered Column 1: Orange & White Card */}
           <div className="flex flex-col gap-4 sm:gap-6">

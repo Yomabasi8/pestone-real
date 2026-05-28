@@ -8,11 +8,11 @@ export default function Navbar() {
   return (
     <header className="w-full max-w-7xl mx-auto px-4 pt-6 sm:px-6 lg:px-8">
       {/* Floating White Navbar Card */}
-      <nav className="bg-white rounded-2xl shadow-sm border border-stone-100 px-6 py-4 sm:px-8 sm:py-3.5 flex items-center justify-between transition-all duration-300">
-        
+      <nav className="bg-white rounded-2xl shadow-sm border border-stone-100 px-3 py-2.5 sm:px-4 sm:py-3 flex items-center justify-between transition-all duration-300">
+
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-orange rounded-lg">
-          <div className="relative w-40 h-10 sm:w-48 sm:h-12">
+          <div className="relative w-28 h-7 sm:w-32 sm:h-8">
             <Image
               src="/Images/Logo-.png"
               alt="Pestone Signature Logo"
@@ -24,7 +24,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 font-sans">
+        <div className="hidden md:flex items-center gap-7 font-sans text-sm">
           <Link
             href="/"
             className="relative py-2 text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
@@ -33,14 +33,14 @@ export default function Navbar() {
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left scale-x-100"></span>
           </Link>
           <Link
-            href="#properties"
+            href="/properties"
             className="relative py-2 text-stone-600 hover:text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
           >
             Properties
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left scale-x-0 group-hover:scale-x-100"></span>
           </Link>
           <Link
-            href="#about"
+            href="/about"
             className="relative py-2 text-stone-600 hover:text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
           >
             About Us
@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-semibold rounded-xl text-white bg-brand-dark hover:bg-brand-orange transition-all duration-300 shadow-md shadow-brand-dark/10 hover:shadow-brand-orange/20 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark active:translate-y-0"
+            className="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-semibold rounded-xl text-white bg-brand-dark hover:bg-brand-orange transition-all duration-300 shadow-md shadow-brand-dark/10 hover:shadow-brand-orange/20 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark active:translate-y-0"
           >
             Contact Us
           </Link>
@@ -106,14 +106,14 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="#properties"
+              href="/properties"
               onClick={() => setIsOpen(false)}
               className="px-4 py-2 rounded-xl text-stone-600 hover:text-brand-orange hover:bg-stone-50 font-medium transition-colors"
             >
               Properties
             </Link>
             <Link
-              href="#about"
+              href="/about"
               onClick={() => setIsOpen(false)}
               className="px-4 py-2 rounded-xl text-stone-600 hover:text-brand-orange hover:bg-stone-50 font-medium transition-colors"
             >

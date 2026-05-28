@@ -76,8 +76,8 @@ export default function Hero() {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
       {/* Modern Rounded Hero Container */}
-      <div className="relative w-full rounded-3xl overflow-hidden min-h-[520px] sm:min-h-[580px] md:min-h-[640px] lg:min-h-[700px] flex items-center shadow-xl border border-stone-200/50">
-        
+      <div className="relative w-full rounded-3xl overflow-hidden min-h-[500px] sm:min-h-[560px] md:min-h-[620px] lg:min-h-[660px] flex items-center shadow-xl border border-stone-200/50">
+
         {/* Background Image */}
         <div className="absolute inset-0 select-none">
           <Image
@@ -88,20 +88,21 @@ export default function Hero() {
             sizes="(max-w-1280px) 100vw, 1280px"
             priority
           />
-          {/* Gradients to blend and soften the visual while preserving content readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/60 via-stone-900/40 to-transparent sm:from-stone-950/65 sm:via-stone-900/40 sm:to-stone-900/10" />
-          <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
+          {/* Left-heavy gradient to anchor the text side */}
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-stone-900/35 to-stone-900/10" />
+          {/* Bottom vignette to ground the composition */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-3xl px-6 py-16 sm:px-12 md:px-16 lg:px-20 flex flex-col items-start gap-4">
-          
-          {/* Main Title utilizing Alatsi Font */}
-          <h1 className="font-alatsi text-[42px] sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] tracking-tight text-white select-none">
-            <span className="text-brand-orange block mb-1">Premium</span>
+        <div className="relative z-10 w-full max-w-2xl px-6 py-12 sm:px-10 md:px-14 lg:px-16 flex flex-col items-start gap-3">
+
+          {/* Main Title */}
+          <h1 className="font-alatsi text-[46px] sm:text-6xl md:text-[68px] lg:text-7xl font-normal leading-none tracking-tight text-white select-none">
+            <span className="text-brand-orange block">Premium</span>
             Real Estate{" "}
             <br className="hidden sm:inline" />
-            <span className="inline-flex items-center min-h-[1.2em]">
+            <span className="inline-flex items-center min-h-[1em]">
               <span className="inline-flex items-center gap-x-[0.25em]">
                 {renderTypedContent()}
               </span>
@@ -110,15 +111,15 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-base sm:text-lg md:text-xl text-stone-200 max-w-lg mt-3 leading-relaxed font-light">
+          <p className="font-sans text-base sm:text-lg text-white max-w-sm mt-2 leading-relaxed font-light">
             Find, buy, and invest in quality properties with ease, transparency, and trust.
           </p>
 
-          {/* Button Link */}
-          <div className="mt-6 sm:mt-8">
+          {/* CTA Button */}
+          <div className="mt-5">
             <Link
               href="#properties"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-brand-dark hover:bg-brand-orange transition-all duration-300 shadow-lg shadow-brand-dark/20 hover:shadow-brand-orange/30 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark active:translate-y-0"
+              className="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-xl text-white bg-brand-dark hover:bg-brand-orange transition-all duration-300 shadow-md shadow-brand-dark/20 hover:shadow-brand-orange/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark active:translate-y-0"
             >
               Explore Properties
             </Link>
@@ -126,7 +127,7 @@ export default function Hero() {
 
         </div>
 
-        {/* Decorative subtle ambient border glow overlay for glassmorphism look */}
+        {/* Glassmorphism border ring */}
         <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
       </div>
     </section>
