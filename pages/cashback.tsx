@@ -33,10 +33,10 @@ export default function CashbackPage() {
           <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center justify-center border border-stone-200/50">
             <div className="absolute inset-0 select-none">
               <Image
-                src="/Images/greenfield.jpg"
+                src="/Images/cashback-bg.jpg"
                 alt="Cashback"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover object-center"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-stone-900/50 to-stone-900/20" />
