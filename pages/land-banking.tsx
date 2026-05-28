@@ -49,9 +49,6 @@ export default function LandBankingPage() {
                 <span className="text-brand-orange">Land</span>
                 <span className="text-white"> Banking</span>
               </h1>
-              <p className="mt-4 font-sans text-base sm:text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
-                Secure land today. Watch its value grow tomorrow.
-              </p>
             </div>
             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
           </div>

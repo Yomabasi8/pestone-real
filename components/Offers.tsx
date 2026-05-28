@@ -9,7 +9,7 @@ const offers = [
       "Secure valuable land assets today and position yourself for future growth and long-term investment opportunities.",
     link: "/land-banking",
     linkLabel: "Explore Land Parcels",
-    active: true,
+    active: false,
   },
   {
     image: "/Images/housing-units.jpg",
