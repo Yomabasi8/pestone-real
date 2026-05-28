@@ -40,7 +40,7 @@ function Stars({ count }: { count: number }) {
 function TestimonialCard({ text, name, stars }: { text: string; name: string; stars: number }) {
   return (
     <div className="bg-white rounded-2xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm">
-      <p className="font-sans text-base sm:text-lg leading-relaxed flex-1" style={{ color: "#626262" }}>
+      <p className="font-sans text-base sm:text-lg leading-relaxed tracking-[-1px] flex-1" style={{ color: "#626262" }}>
         {text}
       </p>
       <div className="flex flex-col items-end gap-1">

@@ -63,7 +63,7 @@ export default function LandBankingPage() {
             <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark">
               Own Land. Build Wealth.
             </h2>
-            <p className="font-sans text-base sm:text-lg text-brand-black-light leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-brand-black-light leading-relaxed tracking-[-1px]">
               Land banking is one of the smartest long-term investment strategies available. By acquiring land in strategic locations today, you position yourself to benefit from appreciation as infrastructure, development, and demand grow around it. Pestone Signature connects you with verified, high-potential land parcels across prime locations.
             </p>
             <div className="flex justify-center mt-2">
@@ -134,7 +134,7 @@ export default function LandBankingPage() {
                 <div key={step} className="flex flex-col items-center text-center gap-3">
                   <span className="font-alatsi text-4xl text-brand-orange">{step}</span>
                   <h3 className="font-alatsi text-xl text-brand-black-dark">{title}</h3>
-                  <p className="font-sans text-sm text-stone-500 leading-relaxed">{description}</p>
+                  <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">{description}</p>
                 </div>
               ))}
             </div>

@@ -26,7 +26,7 @@ export default function About({ showBadge = true }: { showBadge?: boolean }) {
           </h2>
 
           {/* Body */}
-          <div className="flex flex-col gap-4 text-brand-black-light font-sans text-base sm:text-lg leading-relaxed">
+          <div className="flex flex-col gap-4 text-brand-black-light font-sans text-base sm:text-lg leading-relaxed tracking-[-1px]">
             <p>
               At PESTONE SIGNATURE LTD, we are focused on helping individuals and investors secure valuable properties with confidence.
             </p>

@@ -56,7 +56,7 @@ export default function PropertiesPage() {
                 </div>
                 <div className="flex flex-col gap-1 px-1 pt-1 pb-2">
                   <h3 className="font-alatsi text-xl text-brand-black-dark leading-snug">{property.title}</h3>
-                  <p className="font-sans text-sm text-stone-500 leading-relaxed">{property.shortDescription}</p>
+                  <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">{property.shortDescription}</p>
                   <p className="font-sans text-sm font-semibold text-brand-black-dark">Location: {property.location}</p>
                   <div className="flex items-center justify-between mt-3">
                     <span className="font-alatsi text-xl text-brand-black-dark">{property.price}</span>

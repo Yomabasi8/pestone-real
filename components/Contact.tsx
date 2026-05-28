@@ -24,7 +24,7 @@ export default function Contact() {
             <h2 className="font-alatsi text-4xl sm:text-5xl font-normal text-brand-black-dark">
               Let&apos;s Get In Touch
             </h2>
-            <p className="font-sans text-base text-stone-400 leading-relaxed">
+            <p className="font-sans text-base text-stone-400 leading-relaxed tracking-[-1px]">
               Ready to find your next property?<br />
               Let&apos;s help you get started. Reach out today and our team will respond promptly.
             </p>

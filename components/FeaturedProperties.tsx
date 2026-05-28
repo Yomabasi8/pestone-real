@@ -23,7 +23,7 @@ function PropertyCard({ property }: { property: typeof properties[number] }) {
         <h3 className="font-alatsi text-xl text-brand-black-dark leading-snug">
           {property.title}
         </h3>
-        <p className="font-sans text-sm text-stone-500 leading-relaxed">
+        <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">
           {property.shortDescription}
         </p>
         <p className="font-sans text-sm font-semibold text-brand-black-dark">
@@ -55,7 +55,7 @@ export default function FeaturedProperties() {
           <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark">
             Featured Properties
           </h2>
-          <p className="font-sans text-lg sm:text-xl text-brand-black-light max-w-2xl leading-relaxed">
+          <p className="font-sans text-lg sm:text-xl text-brand-black-light max-w-2xl leading-relaxed tracking-[-1px]">
             Discover handpicked properties that match your lifestyle and investment goals.
             Browse our latest listings and connect directly with our team for inquiries or inspections.
           </p>

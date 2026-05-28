@@ -111,7 +111,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-base sm:text-lg text-white max-w-sm mt-2 leading-relaxed font-light">
+          <p className="font-sans text-base sm:text-lg text-white max-w-sm mt-2 leading-relaxed tracking-[-1px] font-light">
             Find, buy, and invest in quality properties with ease, transparency, and trust.
           </p>
 

@@ -20,7 +20,7 @@ export default function MissionVision() {
             <h3 className="font-alatsi text-lg font-normal text-brand-black-dark">
               Our Mission
             </h3>
-            <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed flex-1">
+            <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed tracking-[-1px] flex-1">
               To simplify real estate transactions by providing{" "}
               <span className="text-brand-orange">transparent</span>, reliable, and{" "}
               <span className="text-brand-orange">professional</span> services that help clients confidently buy, sell, and invest in valuable properties.
@@ -43,7 +43,7 @@ export default function MissionVision() {
             <h3 className="font-alatsi text-lg font-normal text-brand-black-dark">
               Our Vision
             </h3>
-            <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed flex-1">
+            <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed tracking-[-1px] flex-1">
               To become a leading real estate brand known for{" "}
               <span className="text-brand-orange">trust</span>, innovation, in delivering{" "}
               <span className="text-brand-orange">premium</span> property solutions and creating long-term value for clients and investors.

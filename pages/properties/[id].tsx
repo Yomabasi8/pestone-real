@@ -18,7 +18,7 @@ function MiniContactForm({ propertyTitle }: { propertyTitle: string }) {
     <div className="bg-white rounded-2xl p-6 flex flex-col gap-5 shadow-sm border border-stone-100">
       <div>
         <h3 className="font-alatsi text-2xl text-brand-black-dark">Let&apos;s Get In Touch</h3>
-        <p className="font-sans text-sm text-stone-400 mt-1 leading-relaxed">
+        <p className="font-sans text-sm text-stone-400 mt-1 leading-relaxed tracking-[-1px]">
           Ready to find your next property?<br />
           Let&apos;s help you get started. Reach out today and our team will respond promptly.
         </p>
@@ -138,7 +138,7 @@ export default function PropertyDetail({ property, similar }: Props) {
               {/* Description */}
               <div className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col gap-4">
                 <h2 className="font-alatsi text-lg text-brand-black-dark border-none">Property Description</h2>
-                <div className="font-sans text-sm text-stone-500 leading-relaxed flex flex-col gap-3">
+                <div className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px] flex flex-col gap-3">
                   {property.longDescription.split("\n\n").map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
@@ -215,7 +215,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                   </div>
                   <div className="flex flex-col gap-1 px-1 pt-1 pb-2">
                     <h3 className="font-alatsi text-xl text-brand-black-dark leading-snug">{p.title}</h3>
-                    <p className="font-sans text-sm text-stone-500 leading-relaxed">{p.shortDescription}</p>
+                    <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">{p.shortDescription}</p>
                     <p className="font-sans text-sm font-semibold text-brand-black-dark">Location: {p.location}</p>
                     <div className="flex items-center justify-between mt-3">
                       <span className="font-alatsi text-xl text-brand-black-dark">{p.price}</span>

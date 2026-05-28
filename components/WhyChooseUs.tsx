@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
           <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark">
             Why Choose Us
           </h2>
-          <p className="font-sans text-lg sm:text-xl text-brand-black-light">
+          <p className="font-sans text-lg sm:text-xl text-brand-black-light tracking-[-1px]">
             We make real estate simple, reliable, and stress-free.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
                   <h3 className="font-alatsi text-xl font-normal text-brand-black-dark">
                     {reason.title}
                   </h3>
-                  <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed">
+                  <p className="font-sans text-sm sm:text-base text-stone-500 leading-relaxed tracking-[-1px]">
                     {reason.description}
                   </p>
                 </div>

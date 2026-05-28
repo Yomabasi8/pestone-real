@@ -61,8 +61,8 @@ export default function CashbackPage() {
             <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark">
               Get Rewarded When You Invest
             </h2>
-            <p className="font-sans text-base sm:text-lg text-brand-black-light leading-relaxed">
-              At Pestone Signature, we believe investing in real estate should also reward you instantly. Our cashback programme gives you money back on selected property purchases and investment packages — a benefit designed to put more value in your hands from day one.
+            <p className="font-sans text-base sm:text-lg text-brand-black-light leading-relaxed tracking-[-1px]">
+              At Pestone Signature, we believe investing in real estate should also reward you instantly. Our cashback programme gives you money back on selected property purchases and investment packages. It puts more value in your hands from day one.
             </p>
             <div className="flex justify-center mt-2">
               <Link
@@ -109,23 +109,23 @@ export default function CashbackPage() {
                 {
                   step: "01",
                   title: "Choose a Property",
-                  description: "Browse our listings and select any property that qualifies for the cashback offer.",
+                    description: "Browse our listings and pick any property that qualifies for the cashback offer.",
                 },
                 {
                   step: "02",
                   title: "Complete Your Purchase",
-                  description: "Finalise your investment or property purchase with our team — simple and transparent.",
+                  description: "Finalise your investment or property purchase with our team. Simple and transparent.",
                 },
                 {
                   step: "03",
                   title: "Receive Your Cashback",
-                  description: "Your cashback is processed and paid out directly to you after the transaction is completed.",
+                  description: "We process and pay out your cashback directly to you after the transaction is done.",
                 },
               ].map(({ step, title, description }) => (
                 <div key={step} className="flex flex-col items-center text-center gap-3">
                   <span className="font-alatsi text-4xl text-brand-orange">{step}</span>
                   <h3 className="font-alatsi text-xl text-brand-black-dark">{title}</h3>
-                  <p className="font-sans text-sm text-stone-500 leading-relaxed">{description}</p>
+                  <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">{description}</p>
                 </div>
               ))}
             </div>
