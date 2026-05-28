@@ -80,7 +80,7 @@ export default function Offers() {
                   }`}
                 >
                   {offer.linkLabel}
-                  <span className="text-base">↗</span>
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
                 </Link>
               </div>
             </div>
