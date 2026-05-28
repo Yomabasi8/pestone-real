@@ -27,7 +27,7 @@ export default function AboutPage() {
 
         {/* Page Banner */}
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center justify-center shadow-xl border border-stone-200/50">
+          <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center justify-center border border-stone-200/50">
 
             <div className="absolute inset-0 select-none">
               <Image

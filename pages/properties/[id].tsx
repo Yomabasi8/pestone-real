@@ -13,7 +13,7 @@ interface Props {
   similar: Property[];
 }
 
-function MiniContactForm() {
+function MiniContactForm({ propertyTitle }: { propertyTitle: string }) {
   return (
     <div className="bg-white rounded-2xl p-6 flex flex-col gap-5 shadow-sm border border-stone-100">
       <div>
@@ -23,24 +23,31 @@ function MiniContactForm() {
           Let&apos;s help you get started. Reach out today and our team will respond promptly.
         </p>
       </div>
-      <form className="flex flex-col gap-4">
+      <form
+        action="https://formsubmit.co/pestonesignature@gmail.com"
+        method="POST"
+        className="flex flex-col gap-4"
+      >
+        <input type="hidden" name="_subject" value={`Property Enquiry: ${propertyTitle}`} />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-1.5">
             <label className="font-sans text-xs font-semibold text-brand-black-dark">Full Name</label>
-            <input type="text" className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
+            <input type="text" name="name" required className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="font-sans text-xs font-semibold text-brand-black-dark">Email Address</label>
-            <input type="email" className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
+            <input type="email" name="email" required className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
           </div>
         </div>
         <div className="flex flex-col gap-1.5">
           <label className="font-sans text-xs font-semibold text-brand-black-dark">Subject of Inquiry</label>
-          <input type="text" className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
+          <input type="text" name="subject" defaultValue={`Enquiry: ${propertyTitle}`} className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors" />
         </div>
         <div className="flex flex-col gap-1.5">
           <label className="font-sans text-xs font-semibold text-brand-black-dark">Message</label>
-          <textarea rows={4} className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors resize-none" />
+          <textarea name="message" required rows={4} className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors resize-none" />
         </div>
         <button type="submit" className="w-full py-3 rounded-xl bg-brand-dark text-white text-sm font-semibold hover:bg-brand-orange transition-all duration-300">
           Submit Form
@@ -182,7 +189,7 @@ export default function PropertyDetail({ property, similar }: Props) {
               </div>
 
               {/* Mini contact form */}
-              <MiniContactForm />
+              <MiniContactForm propertyTitle={property.title} />
             </div>
 
           </div>

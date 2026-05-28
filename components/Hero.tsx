@@ -76,7 +76,7 @@ export default function Hero() {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
       {/* Modern Rounded Hero Container */}
-      <div className="relative w-full rounded-3xl overflow-hidden min-h-[500px] sm:min-h-[560px] md:min-h-[620px] lg:min-h-[660px] flex items-center shadow-xl border border-stone-200/50">
+      <div className="relative w-full rounded-3xl overflow-hidden min-h-[500px] sm:min-h-[560px] md:min-h-[620px] lg:min-h-[660px] flex items-center border border-stone-200/50">
 
         {/* Background Image */}
         <div className="absolute inset-0 select-none">

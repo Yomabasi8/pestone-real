@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <section className="relative w-full min-h-[720px] flex items-center justify-center py-20">
+    <section id="contact" className="relative w-full min-h-[720px] flex items-center justify-center py-20">
 
       {/* Background image */}
       <div className="absolute inset-0">
@@ -31,27 +31,33 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form className="flex flex-col gap-6">
+          <form
+            action="https://formsubmit.co/pestonesignature@gmail.com"
+            method="POST"
+            className="flex flex-col gap-6"
+          >
+            {/* Formsubmit config */}
+            <input type="hidden" name="_subject" value="New Enquiry from Pestone Signature Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
 
             {/* Row 1: Full Name + Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="flex flex-col gap-2">
-                <label className="font-sans text-sm font-semibold text-brand-black-dark">
-                  Full Name
-                </label>
+                <label className="font-sans text-sm font-semibold text-brand-black-dark">Full Name</label>
                 <input
                   type="text"
-                  placeholder=""
+                  name="name"
+                  required
                   className="w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-brand-black-dark placeholder:text-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="font-sans text-sm font-semibold text-brand-black-dark">
-                  Email Address
-                </label>
+                <label className="font-sans text-sm font-semibold text-brand-black-dark">Email Address</label>
                 <input
                   type="email"
-                  placeholder=""
+                  name="email"
+                  required
                   className="w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-brand-black-dark placeholder:text-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors"
                 />
               </div>
@@ -59,24 +65,21 @@ export default function Contact() {
 
             {/* Subject */}
             <div className="flex flex-col gap-2">
-              <label className="font-sans text-sm font-semibold text-brand-black-dark">
-                Subject of Inquiry
-              </label>
+              <label className="font-sans text-sm font-semibold text-brand-black-dark">Subject of Inquiry</label>
               <input
                 type="text"
-                placeholder=""
+                name="subject"
                 className="w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-brand-black-dark placeholder:text-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors"
               />
             </div>
 
             {/* Message */}
             <div className="flex flex-col gap-2">
-              <label className="font-sans text-sm font-semibold text-brand-black-dark">
-                Message
-              </label>
+              <label className="font-sans text-sm font-semibold text-brand-black-dark">Message</label>
               <textarea
+                name="message"
+                required
                 rows={6}
-                placeholder=""
                 className="w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-brand-black-dark placeholder:text-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition-colors resize-none"
               />
             </div>
@@ -88,8 +91,8 @@ export default function Contact() {
             >
               Submit Form
             </button>
-
           </form>
+
         </div>
       </div>
 

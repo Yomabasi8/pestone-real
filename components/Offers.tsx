@@ -7,7 +7,7 @@ const offers = [
     title: "Land Banking",
     description:
       "Secure valuable land assets today and position yourself for future growth and long-term investment opportunities.",
-    link: "#",
+    link: "/land-banking",
     linkLabel: "Explore Land Parcels",
     active: true,
   },
@@ -16,7 +16,7 @@ const offers = [
     title: "Housing Units",
     description:
       "Explore comfortable, modern, and well-located housing options designed to suit different lifestyles and needs.",
-    link: "#",
+    link: "/properties",
     linkLabel: "Explore Residences",
     active: false,
   },
@@ -25,7 +25,7 @@ const offers = [
     title: "Cashback",
     description:
       "Enjoy rewarding cashback opportunities on selected property deals and investment packages.",
-    link: "#",
+    link: "/cashback",
     linkLabel: "Explore Cashback",
     active: false,
   },
@@ -54,7 +54,7 @@ export default function Offers() {
               className="bg-stone-50 border border-stone-100 rounded-2xl p-5 flex flex-col gap-4 group"
             >
               {/* Image — inset with rounded corners */}
-              <div className="relative w-full h-72 sm:h-80 overflow-hidden">
+              <div className="relative w-full h-72 sm:h-80 rounded-xl overflow-hidden">
                 <Image
                   src={offer.image}
                   alt={offer.title}

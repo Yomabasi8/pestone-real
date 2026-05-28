@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useRouter();
+  const isActive = (href: string) => pathname === href;
 
   return (
     <header className="w-full max-w-7xl mx-auto px-4 pt-6 sm:px-6 lg:px-8">
@@ -25,27 +28,20 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-7 font-sans text-sm">
-          <Link
-            href="/"
-            className="relative py-2 text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
-          >
-            Home
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left scale-x-100"></span>
-          </Link>
-          <Link
-            href="/properties"
-            className="relative py-2 text-stone-600 hover:text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
-          >
-            Properties
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left scale-x-0 group-hover:scale-x-100"></span>
-          </Link>
-          <Link
-            href="/about"
-            className="relative py-2 text-stone-600 hover:text-brand-orange font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group"
-          >
-            About Us
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left scale-x-0 group-hover:scale-x-100"></span>
-          </Link>
+          {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`relative py-2 font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group ${
+                isActive(href) ? "text-brand-orange" : "text-stone-600 hover:text-brand-orange"
+              }`}
+            >
+              {label}
+              <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left ${
+                isActive(href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`} />
+            </Link>
+          ))}
         </div>
 
         {/* Desktop CTA Button */}
@@ -98,27 +94,20 @@ export default function Navbar() {
           id="mobile-menu"
         >
           <div className="flex flex-col gap-4 font-sans text-lg">
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="px-4 py-2 rounded-xl text-brand-orange font-semibold bg-stone-50"
-            >
-              Home
-            </Link>
-            <Link
-              href="/properties"
-              onClick={() => setIsOpen(false)}
-              className="px-4 py-2 rounded-xl text-stone-600 hover:text-brand-orange hover:bg-stone-50 font-medium transition-colors"
-            >
-              Properties
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className="px-4 py-2 rounded-xl text-stone-600 hover:text-brand-orange hover:bg-stone-50 font-medium transition-colors"
-            >
-              About Us
-            </Link>
+            {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className={`px-4 py-2 rounded-xl font-medium transition-colors ${
+                  isActive(href)
+                    ? "text-brand-orange font-semibold bg-stone-50"
+                    : "text-stone-600 hover:text-brand-orange hover:bg-stone-50"
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
           <hr className="border-stone-100" />
