@@ -53,7 +53,9 @@ export default function Footer() {
               {["Instagram", "Facebook", "LinkedIn"].map((platform) => (
                 <a
                   key={platform}
-                  href="#"
+                  href={platform === "Instagram" ? "https://www.instagram.com/realtorgeeoflagos?igsh=bWhld2M1MzAyNDg1" : "#"}
+                  target={platform === "Instagram" ? "_blank" : undefined}
+                  rel={platform === "Instagram" ? "noopener noreferrer" : undefined}
                   className="font-sans text-base font-bold text-white hover:text-brand-orange transition-colors duration-200"
                 >
                   {platform}
