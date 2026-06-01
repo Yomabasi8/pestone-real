@@ -23,7 +23,7 @@ export default function BramsCityscapePage() {
 
         {/* Hero Banner */}
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center border border-stone-200/50">
+          <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-start sm:items-center border border-stone-200/50">
             <div className="absolute inset-0 select-none">
               <Image
                 src="/Images/Banner for bams.jpg"
@@ -34,7 +34,7 @@ export default function BramsCityscapePage() {
               />
               <div className="absolute inset-0 bg-black/40 sm:bg-black/20" />
             </div>
-            <div className="relative z-10 text-right px-8 sm:px-12 lg:px-16 w-full">
+            <div className="relative z-10 text-right px-8 sm:px-12 lg:px-16 w-full pt-16 sm:pt-0">
               <h1 className="font-alatsi text-5xl sm:text-6xl lg:text-7xl font-normal leading-none tracking-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
                 <span className="text-brand-orange">Introducing</span>
                 <br />
