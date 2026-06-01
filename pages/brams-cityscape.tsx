@@ -32,7 +32,7 @@ export default function BramsCityscapePage() {
                 className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/40 sm:bg-black/20" />
             </div>
             <div className="relative z-10 text-right px-8 sm:px-12 lg:px-16 w-full">
               <h1 className="font-alatsi text-5xl sm:text-6xl lg:text-7xl font-normal leading-none tracking-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
