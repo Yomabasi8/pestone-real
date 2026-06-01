@@ -10,6 +10,7 @@ const offers = [
     link: "/land-banking",
     linkLabel: "Explore Land Parcels",
     active: false,
+    tag: null,
   },
   {
     image: "/Images/housing-units.jpg",
@@ -19,6 +20,7 @@ const offers = [
     link: "/properties",
     linkLabel: "Explore Residences",
     active: false,
+    tag: null,
   },
   {
     image: "/Images/cashback.png",
@@ -28,6 +30,17 @@ const offers = [
     link: "/cashback",
     linkLabel: "Explore Cashback",
     active: false,
+    tag: null,
+  },
+  {
+    image: "/Images/Brams Cityscape.png",
+    title: "Brams Cityscape",
+    description:
+      "A rare dual-income investment at a dynamic growth corridor. 200 acres in Kobape with up to 35% annual returns.",
+    link: "/brams-cityscape",
+    linkLabel: "Learn More",
+    active: true,
+    tag: "Exciting Offer",
   },
 ];
 
@@ -47,7 +60,7 @@ export default function Offers() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {offers.map((offer) => (
             <div
               key={offer.title}
@@ -61,6 +74,11 @@ export default function Offers() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {offer.tag && (
+                  <span className="absolute top-3 left-3 z-10 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange text-white shadow-lg">
+                    {offer.tag}
+                  </span>
+                )}
               </div>
 
               {/* Content */}

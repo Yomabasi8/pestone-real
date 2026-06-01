@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function Contact() {
+interface ContactProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function Contact({ title, subtitle }: ContactProps) {
   return (
     <section id="contact" className="relative w-full min-h-[720px] flex items-center justify-center py-20">
 
@@ -22,11 +27,10 @@ export default function Contact() {
           {/* Header */}
           <div className="flex flex-col gap-2">
             <h2 className="font-alatsi text-4xl sm:text-5xl font-normal text-brand-black-dark">
-              Let&apos;s Get In Touch
+              {title || "Let\u2019s Get In Touch"}
             </h2>
             <p className="font-sans text-base text-stone-400 leading-relaxed tracking-[-1px]">
-              Ready to find your next property?<br />
-              Let&apos;s help you get started. Reach out today and our team will respond promptly.
+              {subtitle || "Ready to find your next property? Let\u2019s help you get started. Reach out today and our team will respond promptly."}
             </p>
           </div>
 
