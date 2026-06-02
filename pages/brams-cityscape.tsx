@@ -127,6 +127,30 @@ export default function BramsCityscapePage() {
           </div>
         </section>
 
+        {/* Live Map */}
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="font-alatsi text-3xl sm:text-4xl font-normal tracking-tight text-brand-black-dark">
+              Location
+            </h2>
+            <p className="font-sans text-base text-brand-black-light leading-relaxed tracking-[-1px] mt-2">
+              Kobape, Abeokuta — Ogun State
+            </p>
+          </div>
+          <div className="w-full rounded-2xl overflow-hidden shadow-md">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126832!2d3.500298!3d7.053782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0!2zN8KwMDMnMTMuNiJOIDPCsDMwJzAxLjEiRQ!5e0!3m2!1sen!2sng!4v1"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full rounded-2xl"
+            />
+          </div>
+        </section>
+
         <Contact
           title="Schedule Investment Consultation"
           subtitle="Ready to secure your stake in Brams Cityscape? Fill in the form below and our team will reach out to discuss this exclusive opportunity."
