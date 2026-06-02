@@ -75,7 +75,7 @@ export default function Offers() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {offer.tag && (
-                  <span className="absolute top-3 left-3 z-10 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-brand-orange border border-brand-orange/30">
+                  <span className="absolute top-3 left-3 sm:left-3 right-3 sm:right-auto z-10 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-brand-orange border border-brand-orange/30 ml-auto sm:ml-0 w-fit">
                     {offer.tag}
                   </span>
                 )}
