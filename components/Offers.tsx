@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const offers = [
   {
-    image: "/Images/land-banking.jpg",
+    image: "/Images/new land banking.jpg",
     title: "Land Banking",
     description:
       "Secure valuable land assets today and position yourself for future growth and long-term investment opportunities.",
@@ -62,9 +62,10 @@ export default function Offers() {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {offers.map((offer) => (
-            <div
+            <Link
               key={offer.title}
-              className="bg-stone-50 border border-stone-100 rounded-2xl p-5 flex flex-col gap-4 group"
+              href={offer.link}
+              className="bg-stone-50 border border-stone-100 rounded-2xl p-5 flex flex-col gap-4 group hover:shadow-lg transition-all duration-300"
             >
               {/* Image — inset with rounded corners */}
               <div className="relative w-full h-72 sm:h-80 rounded-xl overflow-hidden">
@@ -89,19 +90,18 @@ export default function Offers() {
                 <p className="font-sans text-sm text-stone-500 leading-relaxed tracking-[-1px]">
                   {offer.description}
                 </p>
-                <Link
-                  href={offer.link}
+                <span
                   className={`inline-flex items-center gap-1 text-sm font-medium mt-2 transition-colors duration-200 ${
                     offer.active
                       ? "text-brand-orange"
-                      : "text-brand-black-dark hover:text-brand-orange"
+                      : "text-brand-black-dark group-hover:text-brand-orange"
                   }`}
                 >
                   {offer.linkLabel}
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
