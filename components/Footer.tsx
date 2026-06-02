@@ -28,6 +28,15 @@ export default function Footer() {
                 pestonesignature@gmail.com
               </a>
             </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-sans text-sm text-white">Call us</span>
+              <a
+                href="tel:+2349130426840"
+                className="font-sans text-sm font-bold text-white hover:text-brand-orange transition-colors duration-200"
+              >
+                +234 913 042 6840
+              </a>
+            </div>
           </div>
 
           {/* Middle: Navigation */}
