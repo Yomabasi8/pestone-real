@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
+import Reveal from "../../components/Reveal";
 import { properties } from "../../data/properties";
 
 export default function PropertiesPage() {
@@ -20,6 +21,7 @@ export default function PropertiesPage() {
         <Navbar />
 
         {/* Page Banner */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="relative w-full rounded-3xl overflow-hidden min-h-[280px] sm:min-h-[360px] flex items-center justify-center border border-stone-200/50">
             <div className="absolute inset-0 select-none">
@@ -42,8 +44,10 @@ export default function PropertiesPage() {
             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
           </div>
         </section>
+        </Reveal>
 
         {/* Listings Grid */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {properties.map((property) => (
@@ -72,9 +76,10 @@ export default function PropertiesPage() {
             ))}
           </div>
         </section>
+        </Reveal>
 
-        <Contact />
-        <Footer />
+        <Reveal><Contact /></Reveal>
+        <Reveal><Footer /></Reveal>
       </main>
     </>
   );

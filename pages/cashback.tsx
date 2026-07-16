@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 
 const galleryImages = [
   { src: "/Images/caskback-1.png", alt: "Cashback Offer 1" },
@@ -29,6 +30,7 @@ export default function CashbackPage() {
         <Navbar />
 
         {/* Page Banner */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center justify-center border border-stone-200/50">
             <div className="absolute inset-0 select-none">
@@ -51,8 +53,10 @@ export default function CashbackPage() {
             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
           </div>
         </section>
+        </Reveal>
 
         {/* Intro */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="max-w-3xl mx-auto text-center flex flex-col gap-5">
             <span className="inline-flex mx-auto items-center px-3 py-1 rounded-full text-sm font-medium bg-brand-orange/10 text-brand-orange border border-brand-orange/20">
@@ -76,8 +80,10 @@ export default function CashbackPage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
         {/* Gallery */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {galleryImages.map((img) => (
@@ -95,8 +101,10 @@ export default function CashbackPage() {
             ))}
           </div>
         </section>
+        </Reveal>
 
         {/* How it works */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
           <div className="bg-white rounded-3xl border border-stone-100 p-8 sm:p-12">
             <div className="max-w-2xl mx-auto text-center mb-10">
@@ -131,9 +139,10 @@ export default function CashbackPage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
-        <Contact />
-        <Footer />
+        <Reveal><Contact /></Reveal>
+        <Reveal><Footer /></Reveal>
       </main>
     </>
   );

@@ -5,6 +5,7 @@ import About from "../components/About";
 import MissionVision from "../components/MissionVision";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 
 export default function AboutPage() {
   return (
@@ -26,6 +27,7 @@ export default function AboutPage() {
         <Navbar />
 
         {/* Page Banner */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-center justify-center border border-stone-200/50">
 
@@ -51,18 +53,19 @@ export default function AboutPage() {
             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
           </div>
         </section>
+        </Reveal>
 
         {/* About section — no badge */}
-        <About showBadge={false} />
+        <Reveal><About showBadge={false} /></Reveal>
 
         {/* Mission & Vision */}
-        <MissionVision />
+        <Reveal><MissionVision /></Reveal>
 
         {/* Contact */}
-        <Contact />
+        <Reveal><Contact /></Reveal>
 
         {/* Footer */}
-        <Footer />
+        <Reveal><Footer /></Reveal>
 
       </main>
     </>

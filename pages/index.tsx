@@ -3,12 +3,14 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Advisors from "../components/Advisors";
 import Offers from "../components/Offers";
+import WatchOut from "../components/WatchOut";
 import About from "../components/About";
 import FeaturedProperties from "../components/FeaturedProperties";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 
 export default function Home() {
   return (
@@ -29,31 +31,34 @@ export default function Home() {
         <Navbar />
 
         {/* Hero Section Component */}
-        <Hero />
+        <Reveal><Hero /></Reveal>
 
         {/* Advisors and Stats Section Component */}
-        <Advisors />
+        <Reveal><Advisors /></Reveal>
 
         {/* What We Offer Section */}
-        <Offers />
+        <Reveal><Offers /></Reveal>
+
+        {/* Watch Out! Section */}
+        <Reveal><WatchOut /></Reveal>
 
         {/* About Section */}
-        <About />
+        <Reveal><About /></Reveal>
 
         {/* Featured Properties Section */}
-        <FeaturedProperties />
+        <Reveal><FeaturedProperties /></Reveal>
 
         {/* Why Choose Us Section */}
-        <WhyChooseUs />
+        <Reveal><WhyChooseUs /></Reveal>
 
         {/* Testimonials Section */}
-        <Testimonials />
+        <Reveal><Testimonials /></Reveal>
 
         {/* Contact Section */}
-        <Contact />
+        <Reveal><Contact /></Reveal>
 
         {/* Footer */}
-        <Footer />
+        <Reveal><Footer /></Reveal>
       </main>
     </>
   );

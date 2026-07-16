@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Reveal from "../../components/Reveal";
 import { properties, Property } from "../../data/properties";
 
 interface Props {
@@ -77,6 +78,7 @@ export default function PropertyDetail({ property, similar }: Props) {
       <main className="min-h-screen bg-brand-bg bg-[#E7E5E4] flex flex-col">
         <Navbar />
 
+        <Reveal>
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-8 pb-12">
 
           {/* Back */}
@@ -195,8 +197,10 @@ export default function PropertyDetail({ property, similar }: Props) {
           </div>
 
         </div>
+        </Reveal>
 
         {/* Similar Properties — full-width white section */}
+        <Reveal>
         <section className="w-full bg-white py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
             <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark">
@@ -229,8 +233,9 @@ export default function PropertyDetail({ property, similar }: Props) {
             </div>
           </div>
         </section>
+        </Reveal>
 
-        <Footer />
+        <Reveal><Footer /></Reveal>
       </main>
     </>
   );

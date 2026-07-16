@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 
 export default function BramsCityscapePage() {
   return (
@@ -22,6 +23,7 @@ export default function BramsCityscapePage() {
         <Navbar />
 
         {/* Hero Banner */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="relative w-full rounded-3xl overflow-hidden min-h-[340px] sm:min-h-[420px] flex items-start sm:items-center border border-stone-200/50">
             <div className="absolute inset-0 select-none">
@@ -44,8 +46,10 @@ export default function BramsCityscapePage() {
             <div className="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none" />
           </div>
         </section>
+        </Reveal>
 
         {/* Executive Summary */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="max-w-4xl mx-auto flex flex-col gap-8">
             <div className="text-center">
@@ -126,8 +130,10 @@ export default function BramsCityscapePage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
         {/* Live Map */}
+        <Reveal>
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="font-alatsi text-3xl sm:text-4xl font-normal tracking-tight text-brand-black-dark">
@@ -150,13 +156,16 @@ export default function BramsCityscapePage() {
             />
           </div>
         </section>
+        </Reveal>
 
+        <Reveal>
         <Contact
           title="Schedule Investment Consultation"
           subtitle="Ready to secure your stake in Brams Cityscape? Fill in the form below and our team will reach out to discuss this exclusive opportunity."
         />
+        </Reveal>
 
-        <Footer />
+        <Reveal><Footer /></Reveal>
       </main>
     </>
   );

@@ -28,7 +28,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-7 font-sans text-sm">
-          {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
+          {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/brams-cityscape", label: "Brams Cityscape" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
             <Link
               key={href}
               href={href}
@@ -94,7 +94,7 @@ export default function Navbar() {
           id="mobile-menu"
         >
           <div className="flex flex-col gap-4 font-sans text-lg">
-            {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
+            {[{ href: "/", label: "Home" }, { href: "/properties", label: "Properties" }, { href: "/brams-cityscape", label: "Brams Cityscape" }, { href: "/about", label: "About Us" }].map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
