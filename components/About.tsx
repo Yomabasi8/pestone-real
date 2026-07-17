@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "./Reveal";
 
 export default function About({ showBadge = true }: { showBadge?: boolean }) {
   return (
@@ -49,7 +48,7 @@ export default function About({ showBadge = true }: { showBadge?: boolean }) {
 
         {/* Right: Image — pinned to section bottom via overflow-hidden clip */}
         <div className="relative flex justify-center lg:justify-end">
-          <Reveal y={100} duration={0.9} className="relative w-full max-w-lg lg:max-w-none h-[320px] sm:h-[420px] lg:h-[640px] mb-[-1px]">
+          <div className="relative w-full max-w-lg lg:max-w-none h-[320px] sm:h-[420px] lg:h-[640px] mb-[-1px]">
             <Image
               src="/Images/hand-holding-house.png"
               alt="Hand holding a house model"
@@ -57,7 +56,7 @@ export default function About({ showBadge = true }: { showBadge?: boolean }) {
               className="object-contain object-bottom"
               priority
             />
-          </Reveal>
+          </div>
         </div>
 
       </div>
