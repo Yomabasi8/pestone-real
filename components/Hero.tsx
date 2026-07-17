@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -78,15 +77,15 @@ export default function Hero() {
       {/* Modern Rounded Hero Container */}
       <div className="relative w-full rounded-3xl overflow-hidden min-h-[500px] sm:min-h-[560px] md:min-h-[620px] lg:min-h-[660px] flex items-center border border-stone-200/50">
 
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 select-none">
-          <Image
-            src="/Images/vertical-shot-white-building-clear-sky 1.png"
-            alt="Premium Real Estate White Building"
-            fill
-            className="object-cover object-center transform transition-transform duration-1000 ease-out hover:scale-105"
-            sizes="(max-w-1280px) 100vw, 1280px"
-            priority
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-center transform transition-transform duration-1000 ease-out hover:scale-105"
           />
           {/* Left-heavy gradient to anchor the text side */}
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-stone-900/35 to-stone-900/10" />
