@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -6,20 +5,15 @@ import MissionVision from "../components/MissionVision";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
+import SEO from "../components/SEO";
 
 export default function AboutPage() {
   return (
     <>
-      <Head>
-        <title>About Us | Pestone Signature</title>
-        <meta
-          name="description"
-          content="Learn about Pestone Signature LTD — our mission, values, and commitment to helping you find the perfect property."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Images/logo-icon-pestone.png" />
-      </Head>
+      <SEO
+        title="About Us | Real Estate Agency in Lekki, Lagos - Pestone Signature"
+        description="Learn about Pestone Signature — a trusted real estate agency in Lekki, Lagos. Our mission, values, and commitment to helping you find the perfect property in Lagos, Nigeria."
+      />
 
       <main className="min-h-screen bg-brand-bg bg-[#E7E5E4] flex flex-col pb-16">
 

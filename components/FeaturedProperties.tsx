@@ -12,7 +12,7 @@ function PropertyCard({ property }: { property: typeof properties[number] }) {
         </span>
         <Image
           src={property.images[0]}
-          alt={property.title}
+          alt={`${property.title} in ${property.location}`}
           fill
           className="object-cover"
         />

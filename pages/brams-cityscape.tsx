@@ -1,23 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
+import SEO from "../components/SEO";
 
 export default function BramsCityscapePage() {
   return (
     <>
-      <Head>
-        <title>Introducing Brams Cityscape | Pestone Signature</title>
-        <meta
-          name="description"
-          content="Discover Brams Cityscape — a premium city development in partnership with Pestone Signature."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Images/logo-icon-pestone.png" />
-      </Head>
+      <SEO
+        title="Brams Cityscape | New City Development in Lagos - Pestone Signature"
+        description="Discover Brams Cityscape — a premium city development in Lagos, Nigeria, in partnership with Pestone Signature. Own land and property in one of Lagos's newest developments."
+      />
 
       <main className="min-h-screen bg-[#E7E5E4] flex flex-col pb-16">
         <Navbar />

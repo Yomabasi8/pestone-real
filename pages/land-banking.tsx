@@ -1,32 +1,26 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
+import SEO from "../components/SEO";
 
 const images = [
-  { src: "/Images/landbanking/Every Plot 1.png", alt: "Every Plot Land Banking Offer" },
-  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-25 1.png", alt: "Land Banking Photo" },
-  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-26 2 1.png", alt: "Land Banking Photo" },
-  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-26 3.png", alt: "Land Banking Photo" },
-  { src: "/Images/landbanking/PHOTO-2026-05-26-11-07-06 1.png", alt: "Land Banking Photo" },
+  { src: "/Images/landbanking/Every Plot 1.png", alt: "Every Plot land banking offer in Lagos - Pestone Signature" },
+  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-25 1.png", alt: "Land banking plots for sale in Lagos - Pestone Signature" },
+  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-26 2 1.png", alt: "Land banking site in Lagos - Pestone Signature" },
+  { src: "/Images/landbanking/PHOTO-2026-05-26-10-37-26 3.png", alt: "Land banking investment plots in Lagos - Pestone Signature" },
+  { src: "/Images/landbanking/PHOTO-2026-05-26-11-07-06 1.png", alt: "Secure land banking programme in Lagos - Pestone Signature" },
 ];
 
 export default function LandBankingPage() {
   return (
     <>
-      <Head>
-        <title>Land Banking | Pestone Signature</title>
-        <meta
-          name="description"
-          content="Secure valuable land assets today and position yourself for future growth with Pestone Signature's land banking programme."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Images/logo-icon-pestone.png" />
-      </Head>
+      <SEO
+        title="Land Banking in Lagos, Nigeria | Pestone Signature"
+        description="Secure valuable land assets in Lagos, Nigeria today and position yourself for future growth with Pestone Signature's land banking programme."
+      />
 
       <main className="min-h-screen bg-[#E7E5E4] flex flex-col pb-16">
         <Navbar />

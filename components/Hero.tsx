@@ -112,7 +112,7 @@ export default function Hero() {
           {/* Subtitle */}
           <div className="mt-2 flex flex-col gap-1">
             <p className="font-sans text-base sm:text-lg text-white max-w-sm leading-relaxed tracking-[-1px] font-light [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
-              While everyone chases properties, smart investors chase returns. We don&apos;t just list houses and landed properties we find assets that actually make money in this market.
+              While everyone chases properties, smart investors chase returns. We don&apos;t just list houses and landed properties in Lekki, Ikota and across Lagos — we find assets that actually make money in this market.
             </p>
           </div>
 

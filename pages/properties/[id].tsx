@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +6,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Reveal from "../../components/Reveal";
+import SEO from "../../components/SEO";
+import { absoluteUrl } from "../../lib/seo";
 import { properties, Property } from "../../data/properties";
 
 interface Props {
@@ -65,15 +66,51 @@ export default function PropertyDetail({ property, similar }: Props) {
   if (router.isFallback) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
   const thumbs = property.images.slice(1, 6);
+  const numericPrice = Number(property.fullPrice.replace(/[^0-9]/g, ""));
+
+  const listingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    name: property.title,
+    description: property.longDescription.split("\n\n")[0],
+    url: absoluteUrl(`/properties/${property.id}`),
+    image: property.images.map((img) => absoluteUrl(img)),
+    datePosted: new Date().toISOString().slice(0, 10),
+    about: {
+      "@type": "House",
+      name: property.title,
+      description: property.shortDescription,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: property.location,
+        addressRegion: "Lagos",
+        addressCountry: "NG",
+      },
+      amenityFeature: property.features.map((feature) => ({
+        "@type": "LocationFeatureSpecification",
+        name: feature,
+      })),
+    },
+    offers: {
+      "@type": "Offer",
+      price: numericPrice,
+      priceCurrency: "NGN",
+      availability:
+        property.status === "Selling"
+          ? "https://schema.org/InStock"
+          : "https://schema.org/LimitedAvailability",
+    },
+  };
 
   return (
     <>
-      <Head>
-        <title>{property.title} | Pestone Signature</title>
-        <meta name="description" content={property.shortDescription} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-      </Head>
+      <SEO
+        title={`${property.title} - ${property.location} | Pestone Signature`}
+        description={`${property.shortDescription} in ${property.location}. Priced at ${property.fullPrice}. View photos, features and documents with Pestone Signature.`}
+        image={absoluteUrl(property.images[0])}
+        type="product"
+        jsonLd={listingJsonLd}
+      />
 
       <main className="min-h-screen bg-brand-bg bg-[#E7E5E4] flex flex-col">
         <Navbar />
@@ -97,7 +134,7 @@ export default function PropertyDetail({ property, similar }: Props) {
 
               {/* Main image */}
               <div className="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden shadow-md">
-                <Image src={property.images[activeImage]} alt={property.title} fill className="object-cover" priority />
+                <Image src={property.images[activeImage]} alt={`${property.title} in ${property.location}`} fill className="object-cover" priority />
                 <span className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-green-500 text-white text-xs font-semibold shadow-sm">
                   {property.status}
                 </span>
@@ -108,7 +145,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                 <div className="grid grid-cols-2 gap-2">
                   {thumbs.slice(0, 2).map((img, i) => (
                     <button key={i} onClick={() => setActiveImage(i + 1)} className={`relative h-32 sm:h-44 rounded-xl overflow-hidden transition-all ${activeImage === i + 1 ? "ring-2 ring-brand-orange" : ""}`}>
-                      <Image src={img} alt="" fill className="object-cover" />
+                      <Image src={img} alt={`${property.title} in ${property.location} - photo`} fill className="object-cover" />
                     </button>
                   ))}
                 </div>
@@ -116,7 +153,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                   <div className={`grid gap-2 ${thumbs.slice(2).length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
                     {thumbs.slice(2).map((img, i) => (
                       <button key={i + 2} onClick={() => setActiveImage(i + 3)} className={`relative h-24 sm:h-32 rounded-xl overflow-hidden transition-all ${activeImage === i + 3 ? "ring-2 ring-brand-orange" : ""}`}>
-                        <Image src={img} alt="" fill className="object-cover" />
+                        <Image src={img} alt={`${property.title} in ${property.location} - photo`} fill className="object-cover" />
                       </button>
                     ))}
                   </div>
@@ -174,7 +211,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                 <div className="grid grid-cols-2 gap-2">
                   {thumbs.slice(0, 2).map((img, i) => (
                     <button key={i} onClick={() => setActiveImage(i + 1)} className={`relative h-36 sm:h-44 rounded-xl overflow-hidden transition-all ${activeImage === i + 1 ? "ring-2 ring-brand-orange" : ""}`}>
-                      <Image src={img} alt="" fill className="object-cover" />
+                      <Image src={img} alt={`${property.title} in ${property.location} - photo`} fill className="object-cover" />
                     </button>
                   ))}
                 </div>
@@ -183,7 +220,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                   <div className={`grid gap-2 ${thumbs.slice(2).length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
                     {thumbs.slice(2).map((img, i) => (
                       <button key={i + 2} onClick={() => setActiveImage(i + 3)} className={`relative h-28 sm:h-32 rounded-xl overflow-hidden transition-all ${activeImage === i + 3 ? "ring-2 ring-brand-orange" : ""}`}>
-                        <Image src={img} alt="" fill className="object-cover" />
+                        <Image src={img} alt={`${property.title} in ${property.location} - photo`} fill className="object-cover" />
                       </button>
                     ))}
                   </div>
@@ -215,7 +252,7 @@ export default function PropertyDetail({ property, similar }: Props) {
                     <span className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-green-500 text-white text-xs font-semibold shadow-sm">
                       {p.status}
                     </span>
-                    <Image src={p.images[0]} alt={p.title} fill className="object-cover" />
+                    <Image src={p.images[0]} alt={`${p.title} in ${p.location}`} fill className="object-cover" />
                   </div>
                   <div className="flex flex-col gap-1 px-1 pt-1 pb-2">
                     <h3 className="font-alatsi text-xl text-brand-black-dark leading-snug">{p.title}</h3>

@@ -1,21 +1,19 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 import Reveal from "../../components/Reveal";
+import SEO from "../../components/SEO";
 import { properties } from "../../data/properties";
 
 export default function PropertiesPage() {
   return (
     <>
-      <Head>
-        <title>Properties | Pestone Signature</title>
-        <meta name="description" content="Browse all available properties listed by Pestone Signature — luxury apartments, duplexes, and more in prime Lagos locations." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-      </Head>
+      <SEO
+        title="Properties for Sale in Lekki & Lagos | Duplexes, Apartments - Pestone Signature"
+        description="Browse verified properties for sale in Lekki, Ikota and across Lagos, Nigeria — luxury apartments, duplexes and terraces with Pestone Signature."
+      />
 
       <main className="min-h-screen bg-[#E7E5E4] flex flex-col pb-16">
         <Navbar />
@@ -56,7 +54,7 @@ export default function PropertiesPage() {
                   <span className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-green-500 text-white text-xs font-semibold shadow-sm">
                     {property.status}
                   </span>
-                  <Image src={property.images[0]} alt={property.title} fill className="object-cover" />
+                  <Image src={property.images[0]} alt={`${property.title} in ${property.location}`} fill className="object-cover" />
                 </div>
                 <div className="flex flex-col gap-1 px-1 pt-1 pb-2">
                   <h3 className="font-alatsi text-xl text-brand-black-dark leading-snug">{property.title}</h3>

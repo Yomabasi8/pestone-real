@@ -1,30 +1,24 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
+import SEO from "../components/SEO";
 
 const galleryImages = [
-  { src: "/Images/caskback-1.png", alt: "Cashback Offer 1" },
-  { src: "/Images/caskback-2.jpg", alt: "Cashback Offer 2" },
-  { src: "/Images/caskback-3.jpg", alt: "Cashback Offer 3" },
+  { src: "/Images/caskback-1.png", alt: "Pestone Signature cashback property offer in Lagos - example 1" },
+  { src: "/Images/caskback-2.jpg", alt: "Pestone Signature cashback property offer in Lagos - example 2" },
+  { src: "/Images/caskback-3.jpg", alt: "Pestone Signature cashback property offer in Lagos - example 3" },
 ];
 
 export default function CashbackPage() {
   return (
     <>
-      <Head>
-        <title>Cashback | Pestone Signature</title>
-        <meta
-          name="description"
-          content="Enjoy rewarding cashback opportunities on selected property deals and investment packages with Pestone Signature."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Images/logo-icon-pestone.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Images/logo-icon-pestone.png" />
-      </Head>
+      <SEO
+        title="Cashback on Property Purchases in Lagos | Pestone Signature"
+        description="Enjoy rewarding cashback opportunities on selected property deals and investment packages in Lekki and Lagos, Nigeria with Pestone Signature."
+      />
 
       <main className="min-h-screen bg-[#E7E5E4] flex flex-col pb-16">
         <Navbar />
