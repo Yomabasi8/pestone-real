@@ -3,9 +3,10 @@ import Image from "next/image";
 interface ContactProps {
   title?: string;
   subtitle?: string;
+  subject?: string;
 }
 
-export default function Contact({ title, subtitle }: ContactProps) {
+export default function Contact({ title, subtitle, subject }: ContactProps) {
   return (
     <section id="contact" className="relative w-full min-h-[720px] flex items-center justify-center py-20">
 
@@ -41,7 +42,7 @@ export default function Contact({ title, subtitle }: ContactProps) {
             className="flex flex-col gap-6"
           >
             {/* Formsubmit config */}
-            <input type="hidden" name="_subject" value="New Enquiry from Pestone Signature Website" />
+            <input type="hidden" name="_subject" value={subject || "New Enquiry from Pestone Signature Website"} />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
 

@@ -7,6 +7,7 @@ const staticRoutes = [
   "/about",
   "/properties",
   "/brams-cityscape",
+  "/harvest-homes",
   "/land-banking",
   "/cashback",
 ];

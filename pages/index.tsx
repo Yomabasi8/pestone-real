@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import HarvestHomesPromo from "../components/HarvestHomesPromo";
 import Advisors from "../components/Advisors";
 import Offers from "../components/Offers";
 import WatchOut from "../components/WatchOut";
@@ -49,6 +50,9 @@ export default function Home() {
 
         {/* Hero Section Component */}
         <Reveal><Hero /></Reveal>
+
+        {/* Harvest Homes launch banner */}
+        <Reveal><HarvestHomesPromo /></Reveal>
 
         {/* Advisors and Stats Section Component */}
         <Reveal><Advisors /></Reveal>

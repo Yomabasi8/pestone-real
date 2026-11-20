@@ -8,6 +8,12 @@
   --color-brand-dark: #10192F;
   --color-brand-bg: #E7E5E4;
 
+  /* Harvest Homes sub-brand */
+  --color-harvest-deep: #0B2E1B;
+  --color-harvest-green: #14532D;
+  --color-harvest-leaf: #22A35A;
+  --color-harvest-gold: #F9C623;
+
   /* Brand fonts */
   --font-sans: var(--font-inter), sans-serif;
   --font-alatsi: var(--font-alatsi), sans-serif;
