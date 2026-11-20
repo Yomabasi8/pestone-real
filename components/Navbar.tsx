@@ -6,18 +6,10 @@ import { useRouter } from "next/router";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/properties", label: "Properties" },
-  { href: "/harvest-homes", label: "Harvest Homes", isNew: true },
+  { href: "/harvest-homes", label: "Harvest Homes" },
   { href: "/brams-cityscape", label: "Brams Cityscape" },
   { href: "/about", label: "About Us" },
 ];
-
-function NewBadge() {
-  return (
-    <span className="ml-1.5 inline-flex items-center rounded-full bg-harvest-gold px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none tracking-wide text-harvest-deep">
-      New
-    </span>
-  );
-}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,16 +36,15 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-7 font-sans text-sm">
-          {navLinks.map(({ href, label, isNew }) => (
+          {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`relative inline-flex items-center py-2 font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group ${
+              className={`relative py-2 font-medium transition-colors duration-200 focus:outline-none focus:text-brand-orange group ${
                 isActive(href) ? "text-brand-orange" : "text-stone-600 hover:text-brand-orange"
               }`}
             >
               {label}
-              {isNew && <NewBadge />}
               <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-brand-orange rounded-full transition-transform duration-200 origin-left ${
                 isActive(href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
               }`} />
@@ -111,19 +102,18 @@ export default function Navbar() {
           id="mobile-menu"
         >
           <div className="flex flex-col gap-4 font-sans text-lg">
-            {navLinks.map(({ href, label, isNew }) => (
+            {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className={`inline-flex items-center px-4 py-2 rounded-xl font-medium transition-colors ${
+                className={`px-4 py-2 rounded-xl font-medium transition-colors ${
                   isActive(href)
                     ? "text-brand-orange font-semibold bg-stone-50"
                     : "text-stone-600 hover:text-brand-orange hover:bg-stone-50"
                 }`}
               >
                 {label}
-                {isNew && <NewBadge />}
               </Link>
             ))}
           </div>
