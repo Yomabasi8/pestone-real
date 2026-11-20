@@ -80,7 +80,6 @@ export const flyers = [
   { src: "/Images/harvest-homes/flyer-introducing.jpg", width: 864, height: 1080, alt: "Introducing Harvest Homes farmland at Laloko Village, Owode Obafemi, Ogun State" },
   { src: "/Images/harvest-homes/flyer-own-your-farmland.jpg", width: 1024, height: 1280, alt: "Harvest Homes bare land and plantain plantation payment plans" },
   { src: "/Images/harvest-homes/flyer-harvest-estimate.jpg", width: 864, height: 1080, alt: "Harvest Homes plantain harvest estimate per acre" },
-  { src: "/Images/harvest-homes/flyer-overview.jpg", width: 426, height: 1002, alt: "Harvest Homes overview: own the land, earn from the plantation" },
   { src: "/Images/harvest-homes/flyer-flexible-payment.jpg", width: 864, height: 1080, alt: "Harvest Homes flexible payment, start with ₦1,000,000" },
   { src: "/Images/harvest-homes/flyer-price-list.jpg", width: 864, height: 1080, alt: "Harvest Homes plantain plantation land price list and harvest estimate" },
   { src: "/Images/harvest-homes/flyer-location.jpg", width: 864, height: 1080, alt: "Harvest Homes location near Nestlé Flowergate, International Breweries and Gateway Airport" },

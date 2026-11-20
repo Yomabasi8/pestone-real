@@ -119,14 +119,15 @@ function PinIcon({ className = "" }: { className?: string }) {
   );
 }
 
-function SectionHeading({ eyebrow, title, accent, description }: { eyebrow: string; title: string; accent: string; description?: string }) {
+function SectionHeading({ eyebrow, title, accent, description }: { eyebrow: string; title: string; accent?: string; description?: string }) {
   return (
     <div className="flex flex-col items-center gap-4 text-center">
       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-harvest-green/10 text-harvest-green border border-harvest-green/20">
         {eyebrow}
       </span>
       <h2 className="font-alatsi text-4xl sm:text-5xl font-normal tracking-tight text-brand-black-dark leading-[1.08]">
-        {title} <span className="font-playfair italic">{accent}</span>
+        {title}
+        {accent && <> <span className="font-playfair italic">{accent}</span></>}
       </h2>
       {description && (
         <p className="font-sans text-lg text-brand-black-light max-w-2xl leading-relaxed tracking-[-1px]">{description}</p>
@@ -530,13 +531,14 @@ export default function HarvestHomesPage() {
 
         {/* Flyers */}
         <Reveal>
-          <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col gap-12">
-            <SectionHeading
-              eyebrow="Campaign"
-              title="The Harvest Homes"
-              accent="flyers"
-              description="Everything at a glance. Tap any flyer to view it full size."
-            />
+          <section className="w-full overflow-hidden py-20 flex flex-col gap-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <SectionHeading
+                eyebrow="Campaign"
+                title="The Harvest Homes"
+                description="Prices, payment plans, harvest estimates and inspection details, straight from our launch campaign. Tap any flyer to see it up close."
+              />
+            </div>
             <FlyerGallery flyers={flyers} />
           </section>
         </Reveal>
@@ -544,19 +546,8 @@ export default function HarvestHomesPage() {
         {/* FAQ */}
         <Reveal>
           <section className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 flex flex-col gap-12">
-            <SectionHeading eyebrow="FAQ" title="Questions," accent="answered" />
+            <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" />
             <FAQ />
-            <p className="text-center font-sans text-sm text-stone-500">
-              Still have questions? Call{" "}
-              {HARVEST_PHONES.map((phone, i) => (
-                <span key={phone.tel}>
-                  {i > 0 && " or "}
-                  <a href={`tel:${phone.tel}`} className="font-semibold text-harvest-green hover:text-brand-orange transition-colors">
-                    {phone.display}
-                  </a>
-                </span>
-              ))}
-            </p>
           </section>
         </Reveal>
 
