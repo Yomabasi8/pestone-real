@@ -1,12 +1,33 @@
+import type { FormEvent } from "react";
 import Image from "next/image";
 
 interface ContactProps {
   title?: string;
   subtitle?: string;
   subject?: string;
+  /** When set (digits only, e.g. "2349130426840"), the form opens a pre-filled WhatsApp chat instead of emailing */
+  whatsappNumber?: string;
 }
 
-export default function Contact({ title, subtitle, subject }: ContactProps) {
+export default function Contact({ title, subtitle, subject, whatsappNumber }: ContactProps) {
+  const handleWhatsAppSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const field = (name: string) => String(data.get(name) ?? "").trim();
+
+    const text = [
+      `*${subject || "New Enquiry from Pestone Signature Website"}*`,
+      "",
+      `*Name:* ${field("name")}`,
+      `*Email:* ${field("email")}`,
+      ...(field("subject") ? [`*Subject:* ${field("subject")}`] : []),
+      "",
+      field("message"),
+    ].join("\n");
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section id="contact" className="relative w-full min-h-[720px] flex items-center justify-center py-20">
 
@@ -39,6 +60,7 @@ export default function Contact({ title, subtitle, subject }: ContactProps) {
           <form
             action="https://formsubmit.co/pestonesignature@gmail.com"
             method="POST"
+            onSubmit={whatsappNumber ? handleWhatsAppSubmit : undefined}
             className="flex flex-col gap-6"
           >
             {/* Formsubmit config */}
@@ -94,7 +116,7 @@ export default function Contact({ title, subtitle, subject }: ContactProps) {
               type="submit"
               className="w-full py-4 rounded-xl bg-brand-dark text-white text-sm font-semibold hover:bg-brand-orange transition-all duration-300 shadow-md hover:shadow-brand-orange/20 hover:-translate-y-0.5 active:translate-y-0"
             >
-              Submit Form
+              {whatsappNumber ? "Send via WhatsApp" : "Submit Form"}
             </button>
           </form>
 

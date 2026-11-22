@@ -12,8 +12,9 @@ import FlyerGallery from "../components/FlyerGallery";
 import SEO from "../components/SEO";
 import { SITE_NAME, absoluteUrl } from "../lib/seo";
 import {
+  HARVEST_BOOKING_PHONE,
   HARVEST_LOCATION,
-  HARVEST_PHONES,
+  HARVEST_WHATSAPP,
   TITLE_DOCUMENTS,
   flyers,
   neighbours,
@@ -505,7 +506,7 @@ export default function HarvestHomesPage() {
                       Book Your Slot
                     </Link>
                     <a
-                      href={`tel:${HARVEST_PHONES[0].tel}`}
+                      href={`tel:${HARVEST_BOOKING_PHONE}`}
                       className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl text-harvest-deep border border-harvest-deep/25 hover:bg-harvest-deep/5 transition-all duration-300"
                     >
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -556,6 +557,7 @@ export default function HarvestHomesPage() {
             title="Book a Site Inspection"
             subtitle="Ready to own your farmland? Tell us which plan interests you and our team will reach out with available slots and next steps."
             subject="Harvest Homes Enquiry"
+            whatsappNumber={HARVEST_WHATSAPP}
           />
         </Reveal>
 

@@ -1,10 +1,9 @@
 // All figures are taken from the client's Harvest Homes flyers (public/Images/harvest-homes).
 
 export const HARVEST_LOCATION = "Laloko Village, by Siun, Owode Obafemi, Ogun State";
-export const HARVEST_PHONES = [
-  { display: "+234 816 676 5373", tel: "+2348166765373" },
-  { display: "+234 913 042 6840", tel: "+2349130426840" },
-];
+// Site inspection bookings: "Call to Book" dials this, and the enquiry form opens a WhatsApp chat with it
+export const HARVEST_BOOKING_PHONE = "+2349130426840";
+export const HARVEST_WHATSAPP = "2349130426840";
 export const TITLE_DOCUMENTS = ["Freehold", "Deed of Assignment", "Survey"];
 export const PRICE_PER_BUNCH = 5000;
 
